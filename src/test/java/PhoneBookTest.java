@@ -27,7 +27,7 @@ public class PhoneBookTest {
         phoneBook = new PhoneBook();
         phoneBook.add(new String[]{"Petya", "89213845609"});
         phoneBook.add(new String[]{"Vasya", "89213845608"});
-        String condition = phoneBook.findByNumber("Vasya");
+        String condition = phoneBook.findByName("Vasya");
         Assertions.assertEquals(condition, "89213845608");
     }
 }
