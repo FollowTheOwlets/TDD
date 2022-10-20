@@ -1,14 +1,13 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
-    private Map<String, String> bookNameToPhone;
-    private Map<String, String> bookPhoneToName;
+    private final Map<String, String> bookNameToPhone;
+    private final Map<String, String> bookPhoneToName;
     private int count;
 
     public PhoneBook() {
-        this.bookNameToPhone = new HashMap<>();
-        this.bookPhoneToName = new HashMap<>();
+        this.bookNameToPhone = new TreeMap<>(String::compareTo);
+        this.bookPhoneToName = new TreeMap<>();
         count = 0;
     }
 
@@ -28,6 +27,12 @@ public class PhoneBook {
 
     public String findByName(String name) {
         return bookNameToPhone.get(name);
+    }
+
+    public Set<String> printAllNames() {
+        Set<String> list = null;
+        System.out.println(list);
+        return list;
     }
 
 }
