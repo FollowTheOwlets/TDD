@@ -9,7 +9,7 @@ public class PhoneBookTest {
         phoneBook = new PhoneBook();
         phoneBook.add(new String[]{"Petya", "89213845609"});
 
-        int condition = phoneBook.add(new String[]{"Petya", "89213845609"});
+        int condition = phoneBook.add(new String[]{"Vasya", "89213845608"});
         Assertions.assertEquals(condition, 2);
     }
 }
