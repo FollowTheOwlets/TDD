@@ -30,7 +30,7 @@ public class PhoneBook {
     }
 
     public Set<String> printAllNames() {
-        Set<String> list = null;
+        Set<String> list = this.bookNameToPhone.keySet();
         System.out.println(list);
         return list;
     }
